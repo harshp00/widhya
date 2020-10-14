@@ -1,0 +1,38 @@
+Todays match will depend on recent results in the stadium.
+ANALYSIS-
+As Head to Head results are-Played 24, MI won 12, DC won 12
+so we have to consider recent form of team so-MI at this stadium-Played 5, Won 3, Lost 2 
+DC at this stadium - Played 2, Won 0, Lost 2. So, MI has an edge over DC at this stadium 
+Basic Analysis has been done in my uploaded file .
+
+
+
+According to analysis -
+1. Head to Head total 12 matches played , CSK-9 and SRH-3 (using pandas function of DataFrame)
+  also at this ground both has played 6 matches each wherein SRH won 4 and CSK won 3.
+
+2.Calculate total CSK and than SRH wides individually for all matches using(.count()) and than cacluate avg by dividing the sum to number of matches 
+  we get answer as 7.08 .so approximately 7 wide balls expected. 
+
+3.Calculating the sum of all scores using df['total_runs'] and dividing by no of matches Warner played i.e 6, we get the mean of scores i.e 52.33 (nunique() function of pandas is used here)
+
+4.Using df['dismissal_kind'] we can get total wickets and divide it by no. of matches ,the ans we get is 4.16==4 wickets
+
+5. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get ans= 344.66 .
+
+
+According to analysis -
+1. Head to Head total 20 matches played , DC-9 and RR-11 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  DC won 5 and RR won 3.
+
+2. Calc Delhis run in powerplay using using condition (df['overs']<7) and calculating the sum of all total_scores .So the total we get is 953 and dividing it with
+    no. of matches we get ans as 47.65. 
+
+3.Calc the sum of all scores of Steve Smith using df['batsman_runs'] and dividing by no of matches Smith played  i.e 2, we get the mean of scores i.e 30.5 (nunique() function of pandas is used here)
+
+4.Calc total  RR  and than DC wides individually for all matches using(.count()) and than cacluate avg by dividing the sum to number of matches 
+  we get answer as 6.75 , so approximately 7 wide balls expected.
+
+5.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 11.25  i.e (11-13) wickets.
+
+5. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get ans= 344.66 .
