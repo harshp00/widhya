@@ -1,0 +1,289 @@
+
+--------------------------------------------------------------------
+
+https://www.linkedin.com/posts/mohammed-kamil-khan-04522b186_wpl-activity-6724274526353526784-iOGI
+
+https://www.linkedin.com/posts/harsit59_data-dataanalytics-statistics-activity-6724334213694337024-jdmX
+
+https://www.linkedin.com/posts/vijay-anaparthi-mldlds_dataanalytics-ipl2020-cricket-activity-6724331914867695616-RKBd
+
+VYOM-https://www.linkedin.com/posts/vyom-rastogi-6b35b121_widhyarahul-arulkumaran-data-analysis-hackathon-activity-6724287558852902912-LdLK
+
+MANISH-https://www.linkedin.com/posts/manish-sharma-355ba3189_wpl-widhya-ipl-analysis-kxip-vs-dc-ipl2020-activity-6724330665820737537-9QEB
+
+https://www.linkedin.com/posts/dhiraj-patel-39b94a1b8_wpl-activity-6724292165800878080-SFrj
+
+https://www.linkedin.com/posts/bharath-kumar-827314171_day10-jupyter-notebook-activity-6724327513805467648-zi_j
+
+**-https://www.linkedin.com/posts/aritra-dutta-08b097114_ipl2020-event-datascience-activity-6724324363828502528-IxqE
+
+*https://www.linkedin.com/posts/shashwatk1_widhya-day-10-activity-6724318722632298496-HJP2
+-----------------------------------------------------------------------------
+
+
+
+
+
+
+Todays match will depend on recent results in the stadium.
+ANALYSIS-
+As Head to Head results are-Played 24, MI won 12, DC won 12
+so we have to consider recent form of team so-MI at this stadium-Played 5, Won 3, Lost 2 
+DC at this stadium - Played 2, Won 0, Lost 2. So, MI has an edge over DC at this stadium 
+Basic Analysis has been done in my uploaded file .
+
+
+
+According to analysis -
+1. Head to Head total 12 matches played , CSK-9 and SRH-3 (using pandas function of DataFrame)
+  also at this ground both has played 6 matches each wherein SRH won 4 and CSK won 3.
+
+2.Calculate total CSK and than SRH wides individually for all matches using(.count()) and than cacluate avg by dividing the sum to number of matches 
+  we get answer as 7.08 .so approximately 7 wide balls expected. 
+
+3.Calculating the sum of all scores using df['total_runs'] and dividing by no of matches Warner played i.e 6, we get the mean of scores i.e 52.33 (nunique() function of pandas is used here)
+
+4.Using df['dismissal_kind'] we can get total wickets and divide it by no. of matches ,the ans we get is 4.16==4 wickets
+
+5. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get ans= 344.66 .
+
+
+According to analysis -
+1. Head to Head total 20 matches played , DC-9 and RR-11 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  DC won 5 and RR won 3.
+
+2. Calc Delhis run in powerplay using using condition (df['overs']<7) and calculating the sum of all total_scores .So the total we get is 953 and dividing it with
+    no. of matches we get ans as 47.65. 
+
+3.Calc the sum of all scores of Steve Smith using df['batsman_runs'] and dividing by no of matches Smith played  i.e 2, we get the mean of scores i.e 30.5 (nunique() function of pandas is used here)
+
+4.Calc total  RR  and than DC wides individually for all matches using(.count()) and than cacluate avg by dividing the sum to number of matches 
+  we get answer as 6.75 , so approximately 7 wide balls expected.
+
+5.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 11.25  i.e (11-13) wickets.
+
+5. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get ans= 344.66 .
+
+
+According to analysis -
+1. Head to Head total 24 matches played , RCB-12 and KXIP -12 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  RCB won 2 and  won 2.
+
+2.Using df['dismissal_kind'] for KXIP we can get total wickets and divide it by no. of matches to get the average wickets per match ,the ans we get is 5.65== 5 wickets
+
+3.Calc the sum of  scores of Kohli and scores of ABD when batting together also calc how many matches both have played together using df['match_id'].nunique() and scores using df['batsman_runs'] and dividing by no of matches  played  i.e 7, we get the mean of scores i.e 17.142(nunique() function of pandas is used here)
+
+4.Calc total  KXIP  and than RCB sixes individually for all matches using(.count()) and than cacluate avg by dividing the sum to number of matches  we get answer as 12.04 , so approximately 11-14 sixes.
+
+5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 0.016 == 1
+
+
+According to analysis -
+1. Head to Head total 25 matches played , MI-19 and KKR -6 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  MI won 4 and KKR won 4.
+
+2.Use df['dismissal_kind'] and df['overs'] >5 anddf['overs']  <17 to get wickets between 5-16 overs and ans is 2.16 approx.
+
+3.Calc total  KKR fours  for all matches using(.count()) and than cacluate avg by dividing the total count  to number of matches  we get answer as 13.16 so approx 13 fours.
+
+4.Rohit sharma against KKR got out maximum times as caught out i.e 7 times and in overall matches 103 times using (.value_counts())
+
+5. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get ans as 307.4
+
+
+
+According to analysis -
+1. Head to Head total 21 matches played ,CSK-15  and DC -6 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  DC won 3 and CSK won 1.
+
+2. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get average  ans as 163.90  .
+
+3.Use df['dismissal_kind'] and df['overs'] >14 anddf['overs']  <21 to get wickets taken between 15-20 overs and ans is 2.28 approx.
+
+
+5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 1.083 == 1
+
+
+According to analysis -
+1. Head to Head total 21 matches played ,CSK-15  and DC -6 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  DC won 3 and CSK won 1.
+
+2. Using df['total_runs'] will help in getting total runs than divide by no. of matches and we get average  ans as 163.90  .
+
+3.Use df['dismissal_kind'] and df['overs'] >14 anddf['overs']  <21 to get wickets taken between 15-20 overs and ans is 2.28 approx.
+
+4.Use groupby function using aggregate method to get the mean over for CSk scoring 100 runs.
+
+5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 1.083 == 1
+
+
+According to analysis -
+1. Head to Head total 24 matches played ,MI-13  and KXIP -11 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different  MI played- 4 , won 3 and KXIP played 5 ,  won 2.
+
+
+2.Using (df[l'batsman'] == 'Q de Kock' ) & df['player_dismissed']=='Q de Kock')  we get  maximum bowlers count as seam bowlers since data was not sufficient for matches against KXIP so overall  matches was taken into account .
+
+3.Use df['dismissal_kind'] and df['overs'] >=1anddf['overs']  <7 to get wickets taken in powerplay and ans is 45.571 approx.
+
+4.KL Rahul against MI got out maximum (only) time as caught out i.e 2 times and when overall mathces considered  30 times using (.value_counts()) and df['dismissal_kind']
+
+5.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 12.25  i.e (11-15) wickets.
+
+
+
+According to analysis -
+
+
+1. Head to Head total 21 matches played ,CSK-14  and RR -7 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different CSK  played- 4 , won 3 and KXIP played 5 , won 3.
+
+2.Use df['total_runs'] and df['overs'] >=1anddf['overs']  <7 to get total runs in  powerplay divide by total number of matches to get ans as 1.1667 approx.
+
+3.Calculate total_runs concided by that bowler and total balls bowled divide it by six to get toal overs i.e12.8 and now divide total_runs /overs to get ans as 6.93 
+
+4.Use df['dismissal_kind'] of that bowler  and df['overs'] >=15 anddf['overs']  <21 to get wickets taken between 15-20 overs and ans is 0.75 i.e 1 wicket considering overall matches  .
+
+5.Calculate total runs by  df['total_runs'] and number of balls faced using df['ball'] and (.count() and than divide both of them and multipli by 100 to get strike rate as 131.9925 
+
+
+
+
+According to analysis -
+
+1. Head to Head total 24 matches played ,KXIP-14  and DC -10 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different KXIP  played- 6 , won 3 and KXIP played 6 , won 5
+
+2.Calculate total runs by  df['total_runs'] and number of balls faced using df['ball'] and (.count() and than divide both of them and multipli by 100 to get strike rate as 198.03 against DC. 
+
+3.Calculate total_runs of entire team and than total runs of IYER  but for the matches only when IYER batted and further divide total_runs to team_runs to get contribution and it is 20.36.[use ['match_id'] , ['total_runs'] ].
+
+4.Use df['dismissal_kind'] of all  bowler  and give conditions of removing SHAMI and runout and retired hurt ,hit_wicket and use (.count()) to get   ans as 4.75.
+
+5.Calculate total runs by  df['total_runs'] and number of balls faced using df['ball'] and (.count() and than divide both of them and multipli by 100 to get strike rate as 186.48 against DC . 
+
+
+According to analysis -
+
+1. Head to Head total 24 matches played ,KKR-14  and RCB -10 (using pandas function of DataFrame)
+  BUT at this ground  stats of winning  is  different KKR played- 9 , won 5 and RCB  played 2 , won 2.
+
+2.Use df['dismissal_kind'] of RCB when batting and df['overs'] >=15 anddf['overs']  <21 to get wickets between 15-20 overs and ans is 4.5 against KKR and 4.811considering overall matches  .
+
+3.Use groupby function using cumsum method to get the cumulaitve sum of ABD and note the number of balls ABD played when the runs are >=30 and than store the result in list . 
+
+4.Calculate MORGANS total runs by  df['total_runs'] and number of balls faced using df['ball'] and (.count() )and than divide both of them and multiply by 100 to get strike rate as 91.30 and for last seven balls is 30.0 and subtract both to get 61.3043
+
+5.Calculate RCB total_runs using df['total_runs] and sum() giving the condition of (df['over']>=15) & (df['over']<=20) and get avg ans as 48.79.
+
+
+
+Analysis Shows that:
+
+1. Head to Head total 11 matches played ,RR-5  and SRH -6 (using pandas DataFrame)
+  BUT at this ground  stats of winning  is  different RR : Played 5, Won 1 ; SRH : Played 7, Won 4
+
+2.using df['dismissal_kind'] and filtering out Rashid Khan from all bowlers and further make list of first wicket , second wicket and third wicket by filtering out from dismissal_kind and further find mean of that.
+
+3.Warner  against RR  got out maximum  time as caught out i.e 4 times and when overall mathces considered  37 times using (.value_counts()) and df['dismissal_kind']
+
+4.Filter the batsman and get the 'batsman_runs' append in the list step by step and futher convert the list into dataframe maximum runs are of Samson:331
+
+5.5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 0.272 == 0 or 1 
+
+
+
+According to todays analysis:
+D13
+1.Count head to head matches they have played using df['winner'] and filtering out for only this two teams  we get CSK: 11 and MI: 17..But at this ground  stats of winning  is different CSK: Played 3, Won 1 ; MI : Played 2, Won 1.
+2.For De Cock question calculate the cumulative sum of balls less than 10 having fours and sixes as batsman_runs  only append this list to dataframe making a new column and further calculate the sum of batsman_runs than divide by no of matches he played and ans is : 6.625.
+3. For 3 que use conditions of extra_runs ==0 and batsman _runs==0  count it than calculate total balls and divide it to get the ratio.
+4.Filter out batsman_runs for six and four make two list for fours and six as 1 or 0 than append  it to dataframe now group the data frame by match_id and overs and count the overs if fours>=1 and six>=1 ans we get is :6.21
+5.Get wicket count using dismissal_kind ,dot_balls using que 3,boundaries runs from sum batsman_runs sum() andno of boundaries using  count(). and apply formula.
+
+D14
+Analysis :
+1. Head to Head total 14 matches played ,MI - 10  and RR -10  (using pandas DataFrame) BUT at this ground  stats of winning  is  different RR :Played 6, Won 4 ;MI :Played 7, Won 5
+2.Calc total runs of WARNER  by  df['total_runs'] and number of balls faced using df['ball'] & count() and than divide both of them and multipli by 100 to get strike rate as149.636 
+3.Calc total_runs of entire team and than total runs of RAHUL but for the matches only when RAHUL batted and further divide total_runs to team_runs to get contribution and it is 25.26.[use ['match_id'],['total_runs'] ].
+4.Calc the total balls and total runs loop over the list of total_runs column and set condition to append if runs<=50 and append the balls im other list make a 2D nparray of it and find mean:50.47
+5.Calc the cumulative sum of balls less than 10 having  total as  batsman_runs  only append this list to df making a new column and further calc the sum of bats_runs than use groupby() and ans is:11.5
+
+D15
+Analysis :
+1. Head to Head total 14 matches played ,MI - 10  and RR -10  (using pandas DataFrame) BUT at this ground  stats of winning  is  different RR :Played 6, Won 4 ;MI :Played 7, Won 5
+2.Calc total_runs,bound_runs,1,2and3's runs and set extra runs==0 to get the total balls they played and then apply the formula h Pandya and Pollard are among top choices
+3.Calc no.of runs scored of boundaries give condition as batsman_runs==4 and batsman_runs==6 and div with total runs scored.
+4.Calc the total balls and total runs loop over the list of total_runs column and set condition to append if runs<=50 and append the balls im other list make a 2D nparray of it and find mean for both team separately and find difference it is between 0-10.
+5.Get wicket count using dismissal_kind ,dot_balls using que 3,boundaries runs from sum batsman_runs sum() andno of boundaries using  count(). and apply formula.
+
+D16
+Analysis :
+1. Head to Head total 25 matches played ,KKR - 17  and KXIP-8  (using pandas DataFrame) BUT at this ground  stats of winning  is  different KKR:Played 3, Won 1 ;KXIP :Played 4, Won 3
+2.Calc dotballs by condition extra_runs==0 and batsman_runs==0 and divide it by no of matches to get mean of each team and than sum to get ans which is approx :80
+3.Use df['dismissal_kind'] for both teams when batting and df['overs'] >=15 anddf['overs']  <21 to get wickets between 15-20 overs and total ans is 5.08 --KKR=2.32  and KXIP= 2.57.
+4.Calc total_runs of entire team and than total runs of MAXWELL but for the matches only when MAXWELL  batted and further divide total_runs to team_runs to get contribution and it is 17.160.[use ['match_id'],['total_runs'] ].
+5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 0.4 == 0 or 1 
+
+D17
+Analysis:
+1.Head to Head total 15matches played ,DC - 6  and SRH-9  (using pandas DataFrame) BUT at this ground  stats of winning  is  different DC:Played 7, Won 5 ;SRH :Played 9, Won 5
+2.Calc individually total_runs for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg as aroung 304.53
+3.Calc the total balls and total runs loop over the list of total_runs column and set condition to append if runs<=50 and append the balls im other list make a 2D nparray of it and find mean for both team separately and calc the same for <=80 runs and find the diff between those two values and compare for both teams.
+4.Calc individually total_runs giving condition of <=6 for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg and than compute the diff.
+5.Calc the extra_runs for each giving condition of extra_runs!=0 and sum() it to get the total extras for individual team and then sum to avg it with total matches played it to get the ans.
+
+D18
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Use groupby and agg() for count of df['dismissal_kind'] & filter for df['dismissal_kind'] >=2 and get no of matches played using .nunique() and use len(group_df) / matches to get mean
+3.Replace df['ball'] with 1 and than Groupby 'match_id' and 'bowler' agg df['ball'] and df['total_runs'] and add a column of economy using previous two columns of economy<=8 and get mean
+4.Append 'fours' and 'six' columns as 1 if true and groupby to use agg for 'batsman_runs':'sum','ball':'count','fours':'sum','six':'sum' append 'boundaries' column by df['fours] + df['six'] giving condition 'boundaries'>3 and 'strike_rate'>=130 and we get  a cmplete Dataframe of following conditions ,now get mean
+5.Calc individually total_runs giving condition of 'overs'<=6 for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg and than compute the diff
+
+D19
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Calc individually total_runs for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg as around 304.53
+3.Filter out batsman_runs for six and four make two list for fours and six as 1 or 0 than append  it to dataframe now group the data frame by match_id and overs and count the overs if fours>=1 and six>=1 ans we get is :5.1
+4.using df['dismissal_kind'] and filtering out Deepak Chahar from all bowlers and further make list of first wicket , second wicket and third wicket by filtering out from dismissal_kind and further find mean of that
+5.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 0.8== 0 or 1
+
+D20
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Calc no.of runs scored of boundaries give condition as batsman_runs==4 and batsman_runs==6 and div with total runs scored.
+3.OPP Batsman -Calc batsman_runs using df['batsman_runs] & sum() ,bound_runs giving condition as que 2 and 1,2and3's runs and set extra runs==0 to get the total balls they played. OPP-Bowler :Get  dot_balls ,no.of runs scored of boundaries give condition as batsman_runs==4 and batsman_runs==6  and no of boundaries using  count(). , apply formula. adns normalize to get ans.
+4.Calc dotballs by condition extra_runs==0 and batsman_runs==0 and divide it by no of matches to get mean of each team and than sum to get ans which is approx :80
+5.using df['dismissal_kind'] and filtering out Shami from all bowlers and further make list  (from grouped dataframe )of first wicket , second wicket and third wicket by filtering out from dismissal_kind and further find mean of that
+
+D21:
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Calc individually total_runs for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg as around 344.85
+2.Calc no.of runs scored of boundaries give condition as batsman_runs==4 and batsman_runs==6 and find runs for 1,2 and 3 giving a condition and div with total runs scored.
+4.Use df['dismissal_kind'] and df['overs'] >=1and df['overs']  <7 to get wickets taken in powerplay and ans is 0-1 approx.
+5.Calc dotballs by condition extra_runs==0 and batsman_runs==0 and divide it by no of matches to get mean of each team and than sum to get ans (mean)which is approx :75
+
+
+D22:
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 12.25  i.e (11-15) wickets.
+3.Calc no.of runs scored of boundaries give condition as batsman_runs==4 and batsman_runs==6 and find runs for 1,2 and 3 giving a condition and div with total runs scored.
+4.Find out ecnomy similar to que 5 and for count of boundaries 3 and Filter out batsman_runs for six and four make two list for it as 1 or 0 than append  it to dataframe now group the data frame by match_id and count boundaries.
+5.Replace df['ball'] with 1 and than Groupby 'match_id' and 'bowler' agg df['ball'] and df['total_runs'] and add a column of economy using previous two columns of economy<=8 
+
+D23:
+Analysis:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Append 'fours' and 'six' columns as1 if true and groupby to use agg for 'batsman_runs':'sum','ball':'count','fours':'sum','six':'sum' append 'boundaries' column by df['fours]+df['six'] giving condition 'boundaries'>3 and 'strike_rate'>=130 and fours>=2 and we get  a cmplete Dataframe of following conditions ,now get mean
+3Using df['dismissal_kind'] and filtering out Shami from all bowlers and further make list  (from grouped dataframe )of first ,second and third wicket by filtering out from dismissal_kind and further find mean of that
+4.Replace df['ball'] with1and than Groupby 'match_id','bowler' agg df['ball'] , df['total_runs'] and add a column of eco using previous two columns of eco<=8 and for count of bound and Filter out batsman_runs for six and four make two list for it as 1/0 & append 
+
+
+
+
+
+
+https://www.kaggle.com/nowke9/ipldata
