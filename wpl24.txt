@@ -1,0 +1,6 @@
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Loop over selected batsmen and than give cond. for ext_runs==0 for ball count and for run count give conditions 
+bats_run==0 and similary for other runs 1,2,3,4 and 6 use sum and count function for the same and for crease condition give non_striker==(particular batsman) along with batsman=(particular batsman)
+3.Loop over selected batsman calc no. of boundaries using bats_runs==4 and 6 using .count() and  balls using .count()
+4.Calc balls bowled using predefined count() and  boundaries concided using bats_runs==4 or 6 for that particular bowler and find the ratio highest is of rashid khan :2.36
+5.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 12.14  i.e (11-15) wickets.
