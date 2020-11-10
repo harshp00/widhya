@@ -281,6 +281,45 @@ Analysis:
 3Using df['dismissal_kind'] and filtering out Shami from all bowlers and further make list  (from grouped dataframe )of first ,second and third wicket by filtering out from dismissal_kind and further find mean of that
 4.Replace df['ball'] with1and than Groupby 'match_id','bowler' agg df['ball'] , df['total_runs'] and add a column of eco using previous two columns of eco<=8 and for count of bound and Filter out batsman_runs for six and four make two list for it as 1/0 & append 
 
+D24:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Loop over selected batsmen and than give cond. for ext_runs==0 for ball count and for run count give conditions 
+bats_run==0 and similary for other runs 1,2,3,4 and 6 use sum and count function for the same and for crease condition give non_striker==(particular batsman) along with batsman=(particular batsman)
+3.Loop over selected batsman calc no. of boundaries using bats_runs==4 and 6 using .count() and  balls using .count()
+4.Calc balls bowled using predefined count() and  boundaries concided using bats_runs==4 or 6 for that particular bowler and find the ratio highest is of rashid khan :2.36
+5.Using  df['dismissal_kind']  for both the teams we can get total wickets for both teams individually  and  than sum AND  further divide it by no. of matches ,the ans we get is 12.14  i.e (11-15) wickets.
+
+D25:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.use dismissal_kind to find the wickets and conditions as df['over]<=6 and similarly >=1 and further use count() and dividse by no of matches to get avg.
+3.Replace df['ball'] with1and than Groupby 'match_id','bowler' agg df['ball'] , df['total_runs'] and add a column of eco using previous two columns of (eco<9,six<=2,bound<6)for count of bound and Filter out batsman_runs for six and four make two list for it as 1/0 & append .
+4.Append 'fours' and 'six' columns as 1 if true and groupby to use agg for 'batsman_runs':'sum','ball':'count' give condition for batsman_runs>30 we get  a complete Dataframe of following conditions ,now get mean count
+5.Calc. for Bumrah and further to calc. economy perform steps similar to Q2(remove its conditions) and calc mean and meidan the ans is greater than 8.
+
+
+D26:
+1.Filter df['team1] &df['team2'] from matches dataset,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get H2H for both teams
+2.Replace df['ball'] with 1 and than Groupby 'match_id' and 'bowler' agg df['ball'] and df['total_runs'] and add a column of economy using previous two columns and to find bound and get bound.for bowler similarly of que 3. 
+3.Append 'fours' and 'six' columns as1 if true and groupby to use agg for'bat_runs':'sum','ball':'count','fours':'sum','six':'sum' append 'bound'column by df['fours]+df['six'] giving condition 'bound'>3 and 'strike_rate'>=130 and fours>=2,similarly find runs 1,2,3 and we get a cmplete Dataframe for conditions,get mean
+4.Calc no.of runs scored of boundaries give condition as bat_runs==4 and bat_runs==6 and find runs for 1,2and3 giving a cond and div with total runs scored.
+5.use dismissal_kind to find the wick and conditions as df['over]<=6 and for >=1 and further use count() and get avg.
+
+D27:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.Calc the total balls and total runs loop over the list of total_runs column and set condition to append if runs<=50 and append the balls im other list make a 2D nparray of it and find mean for both team separately and calc the same for <=30 runs and find the diff between those two values and compare for both teams.
+3.apeend over a list for match_id adn look for the index of warner getting out adn trace back in the df to get the runs sum  to 7 index back .
+4.Append 'fours' and 'six' columns as 1 if true and groupby to use agg for 'batsman_runs':'sum' , we get  a complete Dataframe of following conditions ,now get mean count
+5.using df['dismissal_kind'] and filtering out Rashid Khan from all bowlers and further group it  by filtering out from dismissal_kind adn its count and further find mean of that.
+
+
+D28:
+1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
+2.using df['dismissal_kind'] and filtering out Rabada from all bowlers and further group it  by filtering out from dismissal_kind adn its count and further find mean of that.
+3.Filter out Database for HH Pandya calc tot_runs usnig sum and calc matches he played tot divide and get mean.
+4.Using  (df['noball_runs']==1) we sum for both teams and divide by no of matches, ans is 1.083.
+5.Calc individually total_runs for both teams  using df['total_runs] and sum() it to get the total and divide by number of matches they both played collectively to get avg as aroung 304.53
+
+
 
 
 
