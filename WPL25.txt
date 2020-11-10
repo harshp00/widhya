@@ -1,5 +1,0 @@
-1.Filter df['team1] &df['team2'] from matches dataseset ,use df['batting_type'] from deliveries data to get matches and use df['winner'] from deliveries data to get HEAD to HEAD for both teams
-2.use dismissal_kind to find the wickets and conditions as df['over]<=6 and similarly >=1 and further use count() and dividse by no of matches to get avg.
-3.Replace df['ball'] with1and than Groupby 'match_id','bowler' agg df['ball'] , df['total_runs'] and add a column of eco using previous two columns of (eco<9,six<=2,bound<6)for count of bound and Filter out batsman_runs for six and four make two list for it as 1/0 & append .
-4.Append 'fours' and 'six' columns as 1 if true and groupby to use agg for 'batsman_runs':'sum','ball':'count' give condition for batsman_runs>30 we get  a complete Dataframe of following conditions ,now get mean count
-5.Calc. for Bumrah and further to calc. economy perform steps similar to Q2(remove its conditions) and calc mean and meidan the ans is greater than 8.
